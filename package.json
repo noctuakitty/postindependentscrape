@@ -1,5 +1,5 @@
 {
-  "name": "postindependantscrape",
+  "name": "postindependentscrape",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/norwayflames/postindependantscrape.git"
+    "url": "git+https://github.com/norwayflames/postindependentscrape.git"
   },
   "author": "",
   "license": "ISC",
