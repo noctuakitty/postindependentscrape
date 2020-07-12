@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 const db = require("../models");
 
 router.get("/", function (req, res) {
-    res.render("index");
+    res.render("index.handlebars");
 });
 router.get("/scrape", function (req, res) {
             let results = [];
