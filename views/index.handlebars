@@ -8,22 +8,29 @@
             <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Web_scraping" role="button">Learn
                 more</a>
         </p>
+        <a href="/scrape">TO THE SCRAPING</a> ||
+         <a href="/saved">TO THE SAVED THINGS</a>
     </div>
 </div>
-
+{{#each scrapedResults}}
 <div class="articles">
     <div class="row">
         <div class="col-md-4">
             <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-header">Header</div>
+                <div class="card-header">Article</div>
                 <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+                    <h4 class="card-title">{{title}}</h4>
+                    <a href={{a}}>Link to Story ~</a>
+                    <input id="titleID" type="hidden" value="{{title}}">
+                    <input id="linkID" type="hidden" value="{{a}}">
+                    <input id="savebutton" type="submit">
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+    </div>
+</div>
+{{/each}}
+        {{!-- <div class="col-md-4">
             <div class="card border-primary mb-3" style="max-width: 20rem;">
                 <div class="card-header">Header</div>
                 <div class="card-body">
@@ -47,34 +54,33 @@
 </div>
 
 <div class="row">
-        <div class="col-md-4">
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h4 class="card-title">Primary card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div> --}}

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,9 +17,19 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/scrapedcontroller.js");
+const routes = require("./routes/index.js");
 const bodyParser = require("body-parser");
 app.use(routes);
+
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/newsscraper", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    },
+    function(){
+        console.log("Connected to database.");
+    }
+);
 
 app.listen(PORT, function () {
     console.log("listening on port: " + PORT);
