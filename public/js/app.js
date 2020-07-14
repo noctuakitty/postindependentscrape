@@ -1,5 +1,5 @@
-var model = ('./models/article.js');
-var index = ('./routes/index.js');
+// var model = ('./models/article.js');
+// var index = ('./routes/index.js');
 
 // $(".savebutton").on("click", function(){
 //     console.log("hello world");
