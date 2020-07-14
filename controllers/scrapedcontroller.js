@@ -1,6 +1,6 @@
-const router = require("express").Router();
-const article = require("./../models/article.js");
-const db = require("./../models");
+var router = require("express").Router();
+var article = require("./../models/article.js");
+var db = require("./../models");
 
 router.get("/", function (req, res) {
     res.render("index");

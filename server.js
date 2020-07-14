@@ -1,9 +1,8 @@
-const express = require("express");
-const app = express();
-const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
-const mongoose = require("mongoose");
+var express = require("express");
+var app = express();
+var mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({
@@ -11,19 +10,18 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-const exphbs = require("express-handlebars");
+var exphbs = require("express-handlebars");
 
 app.engine(
     "handlebars",
     exphbs({
-        defaultLayout: "main",
-        handlebars: allowInsecurePrototypeAccess(Handlebars)
+        defaultLayout: "main"
     })
 );
 app.set("view engine", "handlebars");
 
-const routes = require("./routes/index.js");
-const bodyParser = require("body-parser");
+var routes = require("./routes/index.js");
+var bodyParser = require("body-parser");
 app.use(routes);
 
 mongoose.connect(

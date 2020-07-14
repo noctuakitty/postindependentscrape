@@ -8,7 +8,6 @@
             <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Web_scraping" role="button">Learn
                 more</a>
         </p>
-        <a href="/scrape">TO THE SCRAPING</a> ||
          <a href="/saved">TO THE SAVED THINGS</a>
     </div>
 </div>
@@ -16,14 +15,14 @@
 <div class="articles">
     <div class="row">
         <div class="col-md-4">
-            <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card border-primary mb-3" style="width: 60rem">
                 <div class="card-header">Article</div>
                 <div class="card-body">
                     <h4 class="card-title">{{title}}</h4>
                     <a href={{a}}>Link to Story ~</a>
                     <input id="titleID" type="hidden" value="{{title}}">
                     <input id="linkID" type="hidden" value="{{a}}">
-                    <input id="savebutton" type="submit">
+                    <button class="savebutton" type="button">Save</button>
                 </div>
             </div>
         </div>
@@ -84,3 +83,4 @@
             </div>
         </div>
     </div> --}}
+
